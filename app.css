@@ -80,3 +80,9 @@ body, html {
     letter-spacing: .2rem;
     margin-right: 2rem;
 }
+@media screen and (max-width: 600px) {
+    .container_itens_logo_message {
+        align-items: center;
+        justify-content: center;
+    }
+}
