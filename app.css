@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container_page_logo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(22, 21, 21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: .33s;
+}
+.container_itens_logo {
+    display: grid;
+    text-align: center;
+    row-gap: 1.3rem;
+}
+#container_page_logo > .container_itens_logo> i {
+    color: #fefefe;
+    font-size: 8rem;
+    animation: brain_pulse infinite ease-in-out 5s;
+}
+@keyframes brain_pulse {
+    30% {
+        transform: scale(.9);
+    }
+    60% {
+        transform: matrix(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.content_load_pulse {
+    background: #fefefe;
+    width: 15rem;
+    height: 1rem;
+    border-radius: 12px;
+}
+.content_load_pulse::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1rem;
+    margin-left: -7.5rem;
+    border-radius: 12px;
+    background: rgb(194, 193, 193);
+    animation: bar_load_logo ease-in-out 5s;
+}
+@keyframes bar_load_logo {
+    100% {
+        width: 15rem;
+    }
+}
+.move_left {
+    margin-left: -100%;
+}
+
+#container_page_messages_alert {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1e1d1d;
+    z-index: -1;
+}
+.container_itens_logo_message {
+    display: flex;
+    min-height: 100vh;
+    align-items: end;
+    justify-content: end;
+}
+.titleMessage_twoPage {
+    color: #545454;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    margin-right: 2rem;
+}
