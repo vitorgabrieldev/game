@@ -1,7 +1,13 @@
 window.addEventListener('load', () => {
-    setTimeout(() => {
-        move_pages.section_left();
-    }, 4900);
+    if(!localStorage.getItem('enterGame')) {
+        localStorage.setItem('enterGame','1');
+        setTimeout(() => {
+            move_pages.section_left();
+        }, 4900);
+    } else {
+        document.querySelector('#container_page_logo').classList.add("move_left");
+        document.querySelector('#container_page_messages_alert').classList.add("move_left");
+    };
 });
 const move_pages = {
     section_left: function() {
@@ -15,9 +21,6 @@ const move_pages = {
             this.section_right();
         }, 8000);
     },
-    section_right:function() {
-
-    },
 };
 function typeWriter(elemento) {
     const textoArray = elemento.innerHTML.split('');
@@ -26,7 +29,6 @@ function typeWriter(elemento) {
       setTimeout(() => elemento.innerHTML += letra, 75 * i);
     });
 };
-
 function enterMouseButton(txt) {
     document.querySelector('.titleOPtionHover').innerHTML = txt;
 };

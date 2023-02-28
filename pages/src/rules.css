@@ -1,0 +1,44 @@
+.container_title {
+    display: flex;
+    justify-content: center;
+}
+.title_page {
+    font-size: 3rem;
+    color: #fefefe;
+    font-family: 'Caveat', cursive;
+}
+.rules_text {
+    padding: 0 5rem 0 5rem;
+    text-align: center;
+}
+.texts {
+    color: #fefefe;
+    font-family: 'Caveat', cursive;
+    font-size: 2.7rem;
+}
+.titlesTexts {
+    font-size: 3rem;
+    text-decoration: underline;
+    background: #ffffff0e;
+}
+.doneGameContainer {
+    padding: .3rem;
+    border-radius: 12px;
+    background: rgb(53, 52, 52);
+}
+.username_king {
+    color: #9c9b9b;
+}
+@media screen and (max-width: 800px) {
+    .texts {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .texts {
+        font-size: 1.5rem;
+    }
+    .rules_text {
+        padding: 1rem;
+    }
+}

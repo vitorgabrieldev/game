@@ -4,3 +4,34 @@ body, html {
     box-sizing: border-box;
     background: #232222;
 }
+.container_header_page_rules {
+    background: rgb(49, 47, 47);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2.5rem .5rem 2.5rem;
+}
+.backButton > .backLink > i {
+    color: #fefefe;
+    font-size: 3rem;
+    user-select: none;
+    border-radius: 12px;
+    padding: .3rem;
+    transition: .33s;
+    cursor: pointer;
+}
+.backButton > .backLink > i:hover {
+    background: rgb(28, 26, 26);
+}
+.buttonMenu > i {
+    color: #fefefe;
+    font-size: 2rem;
+    user-select: none;
+    border-radius: 12px;
+    padding: .3rem;
+    transition: .33s;
+    cursor: pointer;
+}
+.buttonMenu > i:hover {
+    background: rgb(28, 26, 26);
+}

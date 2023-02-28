@@ -86,6 +86,7 @@ body, html {
     font-size: 2rem;
     letter-spacing: .2rem;
     margin-right: 2rem;
+    user-select: none;
 }
 .titleMessage_twoPage::after {
     content: '|';
@@ -93,6 +94,7 @@ body, html {
     animation: pulse_barTyping infinite ease-in-out 1s;
     font-family: sans-serif;
     margin-left: 5px;
+    user-select: none;
 }
 @keyframes pulse_barTyping {
     50% {
