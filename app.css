@@ -81,9 +81,15 @@ body, html {
     letter-spacing: .2rem;
     margin-right: 2rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
     .container_itens_logo_message {
         align-items: center;
         justify-content: center;
+    }
+    .titleMessage_twoPage {
+        font-size: 1.5;
+        text-align: center;
+        margin-right: .5rem;
+        margin-left: .5rem;
     }
 }
