@@ -14,6 +14,8 @@ body, html {
     justify-content: center;
     min-height: 100vh;
     transition: .33s;
+
+    z-index: 100;
 }
 .container_itens_logo {
     display: grid;
@@ -60,13 +62,17 @@ body, html {
 .move_left {
     margin-left: -100%;
 }
+.move_right {
+    margin-right: 200%;
+}
 
 #container_page_messages_alert {
     position: absolute;
     width: 100%;
     height: 100%;
     background: #1e1d1d;
-    z-index: -1;
+    z-index: 99;
+    transition: .33s;
 }
 .container_itens_logo_message {
     display: flex;
@@ -81,6 +87,21 @@ body, html {
     letter-spacing: .2rem;
     margin-right: 2rem;
 }
+.titleMessage_twoPage::after {
+    content: '|';
+    position: absolute;
+    animation: pulse_barTyping infinite ease-in-out 1s;
+    font-family: sans-serif;
+    margin-left: 5px;
+}
+@keyframes pulse_barTyping {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 @media screen and (max-width: 1000px) {
     .container_itens_logo_message {
         align-items: center;
@@ -92,4 +113,132 @@ body, html {
         margin-right: .5rem;
         margin-left: .5rem;
     }
+}
+#container_page_main_info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}  
+.up {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}  
+.down {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}  
+.card1 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: #fefefe;
+    border-radius: 90px 5px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+} 
+.card2 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: #fefefe;
+    border-radius: 5px 90px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}   
+.card3 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: #fefefe;
+    border-radius: 5px 5px 5px 90px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}  
+.card4 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: #fefefe;
+    border-radius: 5px 5px 90px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}  
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #212123;
+    border: 1px solid #fefefe;
+} 
+.card1:hover > i,
+.card2:hover > i,
+.card3:hover > i,
+.card4:hover > i {
+    color: #fefefe;
+}
+.card1,
+.card2,
+.card3,
+.card4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card1 > i,
+.card2 > i,
+.card3 > i,
+.card4 > i {
+    font-size: 2rem;
+    color: #555555;
+}
+.card1 > i,
+.card2 > i {
+    margin-top: 1.5rem;
+}
+.card1 > i {
+    margin-left: .5rem;
+}
+.card2 > i {
+    margin-left: -.8rem;
+    font-size: 2.5rem;
+}
+.card3 > i {
+    margin-left: .5rem;
+}
+.card4 > i {
+    margin-left: -.8rem;
+    font-size: 2.5rem;
+}
+.container_main_page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #2d2b2b;
+}
+.containerCircle {
+    display: grid;
+    text-align: center;
+}
+.titleOPtionHover {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    color: #ababab;
 }
