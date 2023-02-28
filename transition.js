@@ -32,3 +32,6 @@ function typeWriter(elemento) {
 function enterMouseButton(txt) {
     document.querySelector('.titleOPtionHover').innerHTML = txt;
 };
+function redirectNewPlayer() {
+    window.location.href = "./new_player.html";
+};
